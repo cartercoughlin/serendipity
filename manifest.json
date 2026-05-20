@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Serendipity",
+  "version": "0.1.0",
+  "description": "Make room for unexpected discovery by reducing personalization pressure and surfacing new ideas.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "https://www.google.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "icons/logo-128.png"
+  },
+  "action": {
+    "default_icon": {
+      "128": "icons/logo-128.png"
+    },
+    "default_title": "Serendipity",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/*"
+      ],
+      "all_frames": true,
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

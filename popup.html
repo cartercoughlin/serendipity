@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serendipity</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="hero">
+        <div class="eyebrow"><span class="brand-mark">🪩</span> SERENDIPITY</div>
+        <h1>Loosen the profile.</h1>
+        <p>
+          Keep search useful, but leave enough noise in the system for novelty,
+          disagreement, and accidental discovery.
+        </p>
+      </header>
+
+      <label class="toggle-row">
+        <span>Enable on Google Search</span>
+        <input id="enabled" type="checkbox" />
+      </label>
+
+      <label class="toggle-row">
+        <span>Auto re-run with reduced personalization</span>
+        <input id="autoDepersonalize" type="checkbox" />
+      </label>
+
+      <label class="toggle-row">
+        <span>Auto-inject a remix into the query</span>
+        <input id="autoInjectQuery" type="checkbox" />
+      </label>
+
+      <section class="panel">
+        <div class="panel-label">Serendipity intensity</div>
+        <input id="intensity" type="range" min="1" max="5" step="1" />
+        <div id="intensityValue" class="intensity-value"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-label">Query remix engines</div>
+        <label class="check-row"><input id="adjacent" type="checkbox" />Adjacent</label>
+        <label class="check-row"><input id="contrarian" type="checkbox" />Contrarian</label>
+        <label class="check-row"><input id="reflective" type="checkbox" />Reflective</label>
+        <label class="check-row"><input id="random" type="checkbox" />Random</label>
+      </section>
+
+      <p id="status" class="status" aria-live="polite"></p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+  </html>
