@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serendipity Privacy Policy</title>
+    <style>
+      :root {
+        --bg: #fff9f2;
+        --paper: rgba(255, 252, 248, 0.96);
+        --text: #2d2117;
+        --muted: #705a47;
+        --accent: #7a3f19;
+        --line: rgba(122, 63, 25, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at top left, rgba(211, 133, 63, 0.18), transparent 24%),
+          linear-gradient(180deg, var(--bg) 0%, #fffdf9 100%);
+        color: var(--text);
+        font-family: "Avenir Next", "Segoe UI", sans-serif;
+      }
+
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 56px 20px 72px;
+      }
+
+      .card {
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: var(--paper);
+        box-shadow: 0 18px 40px rgba(74, 46, 24, 0.06);
+      }
+
+      .eyebrow {
+        margin-bottom: 12px;
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: 38px;
+        line-height: 1;
+      }
+
+      .intro,
+      p,
+      li {
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      h2 {
+        margin: 28px 0 10px;
+        font-size: 20px;
+        line-height: 1.2;
+      }
+
+      ul {
+        margin: 10px 0 0 0;
+        padding-left: 20px;
+      }
+
+      .meta {
+        margin-top: 28px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      code {
+        font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+        font-size: 0.95em;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article class="card">
+        <div class="eyebrow">🪩 SERENDIPITY</div>
+        <h1>Privacy Policy</h1>
+        <p class="intro">
+          Serendipity is a Chrome extension that modifies Google Search pages to
+          introduce alternate query pivots and optional reduced-personalization
+          search reruns.
+        </p>
+
+        <h2>What Serendipity does</h2>
+        <p>
+          Serendipity operates on supported Google web pages and adds a user-facing
+          panel that offers adjacent, contrarian, reflective, and random search
+          pivots. It can also optionally re-run a Google search with reduced
+          personalization and optionally auto-inject a remix into exploratory
+          queries.
+        </p>
+
+        <h2>User data handling</h2>
+        <p>
+          Serendipity does not collect, transmit, sell, or share personal data to
+          a remote server.
+        </p>
+
+        <h2>What the extension stores</h2>
+        <p>
+          Serendipity stores user preferences locally in Chrome sync storage. This
+          includes:
+        </p>
+        <ul>
+          <li>whether the extension is enabled</li>
+          <li>whether reduced-personalization reruns are enabled</li>
+          <li>whether auto-injection is enabled</li>
+          <li>whether the panel is collapsed</li>
+          <li>intensity level</li>
+          <li>enabled remix engines</li>
+        </ul>
+
+        <h2>Where processing happens</h2>
+        <p>
+          All query remixing and page modifications happen locally in the browser.
+        </p>
+
+        <h2>Permissions used</h2>
+        <ul>
+          <li><code>storage</code>: save user preferences</li>
+          <li><code>tabs</code>: reload the active Google tab after settings changes</li>
+          <li><code>scripting</code>: reinforce injection on supported Google web pages</li>
+          <li><code>webNavigation</code>: reapply the extension when Google changes route state</li>
+          <li><code>https://www.google.com/*</code>: operate on Google Search pages</li>
+        </ul>
+
+        <h2>Unsupported surfaces</h2>
+        <p>
+          Chrome-internal pages such as <code>chrome://contextual-tasks</code> are
+          not scriptable by extensions and are not modified.
+        </p>
+
+        <div class="meta">Last updated: May 20, 2026</div>
+      </article>
+    </main>
+  </body>
+  </html>

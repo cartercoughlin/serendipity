@@ -9,7 +9,10 @@ ZIP_PATH="$DIST_DIR/serendipity-extension.zip"
 SWIFT_CACHE_DIR="/private/tmp/serendipity-swift-module-cache"
 
 mkdir -p "$SWIFT_CACHE_DIR"
-CLANG_MODULE_CACHE_PATH="$SWIFT_CACHE_DIR" swift "$ROOT_DIR/scripts/render_icon.swift" "$ROOT_DIR/icons/logo-128.png"
+CLANG_MODULE_CACHE_PATH="$SWIFT_CACHE_DIR" swift "$ROOT_DIR/scripts/render_icon.swift" "$ROOT_DIR/icons/logo-16.png" 16
+CLANG_MODULE_CACHE_PATH="$SWIFT_CACHE_DIR" swift "$ROOT_DIR/scripts/render_icon.swift" "$ROOT_DIR/icons/logo-32.png" 32
+CLANG_MODULE_CACHE_PATH="$SWIFT_CACHE_DIR" swift "$ROOT_DIR/scripts/render_icon.swift" "$ROOT_DIR/icons/logo-48.png" 48
+CLANG_MODULE_CACHE_PATH="$SWIFT_CACHE_DIR" swift "$ROOT_DIR/scripts/render_icon.swift" "$ROOT_DIR/icons/logo-128.png" 128
 
 mkdir -p "$ARTIFACT_DIR"
 mkdir -p "$ARTIFACT_DIR/icons"
@@ -25,8 +28,7 @@ cp "$ROOT_DIR/popup.css" "$ARTIFACT_DIR/"
 cp "$ROOT_DIR/popup.js" "$ARTIFACT_DIR/"
 cp "$ROOT_DIR/options.html" "$ARTIFACT_DIR/"
 cp "$ROOT_DIR/README.md" "$ARTIFACT_DIR/"
-cp "$ROOT_DIR/icons/logo.svg" "$ARTIFACT_DIR/icons/"
-cp "$ROOT_DIR/icons/logo-128.png" "$ARTIFACT_DIR/icons/"
+cp "$ROOT_DIR/icons/"* "$ARTIFACT_DIR/icons/"
 
 (
   cd "$DIST_DIR"

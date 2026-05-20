@@ -1,7 +1,7 @@
 # Serendipity
 
-Serendipity is a Chrome extension concept for making search less self-reinforcing.
-It does not pretend to erase platform memory. Instead, it creates room for
+Serendipity is a Chrome extension for making search less self-reinforcing. It
+does not pretend to erase platform memory. Instead, it creates room for
 unexpected discovery by doing two practical things:
 
 - It can re-run Google searches with `pws=0` to reduce personalized search bias.
@@ -11,7 +11,7 @@ unexpected discovery by doing two practical things:
 ## What it does
 
 - Manifest V3 extension with a popup and Google Search content script
-- Current host scope is `google.com` only to satisfy Chrome match-pattern rules
+- Current host scope is `google.com` only
 - Toggle to enable or disable the intervention layer
 - Optional automatic depersonalization on Google Search
 - Adjustable serendipity intensity from 1 to 5
@@ -51,6 +51,22 @@ Artifacts are written to:
 5. Toggle intensity and remix engines from the popup and verify the results page reloads
 6. Click a few variant queries and confirm they open Google searches with modified framing
 
+## Chrome Web Store
+
+Submission prep materials live in `submission/`:
+
+- `submission/STORE_LISTING.md`
+- `submission/PRIVACY.md`
+- `submission/REVIEW_NOTES.md`
+
+Build the upload package with:
+
+```bash
+bash scripts/package.sh
+```
+
+Then upload `dist/serendipity-extension.zip` in the Chrome Developer Dashboard.
+
 ## What to look for during testing
 
 - With the extension enabled, query pivots should change as intensity changes
@@ -66,3 +82,7 @@ This version works at the query and result-page layer. It does not spoof your
 identity, click history, signed-in state, or browser fingerprint. That is
 intentional: the first useful version should improve discovery without stepping
 into brittle or deceptive behavior.
+
+It also only works on standard Google web pages. Chrome-hosted internal
+surfaces such as `chrome://contextual-tasks` cannot be modified by extensions,
+so those experiences are out of scope for this version.

@@ -1,18 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
   <title>Serendipity logo</title>
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fff7ee" />
-      <stop offset="100%" stop-color="#f2decb" />
-    </linearGradient>
-  </defs>
-  <rect x="8" y="8" width="112" height="112" rx="28" fill="url(#bg)" />
-  <circle cx="96" cy="34" r="12" fill="#e1b07f" opacity="0.55" />
   <text
-    x="64"
-    y="76"
+    x="66"
+    y="58"
+    dominant-baseline="middle"
     text-anchor="middle"
-    font-size="56"
+    font-size="52"
     font-family="'Apple Symbols', 'Segoe UI Symbol', 'Noto Sans Symbols 2', serif"
     fill="#7a3f19"
   >🪩</text>
